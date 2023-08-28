@@ -79,24 +79,24 @@ width: 25px;
     margin-left: 20px;
 }
 
-.hero{
+.banner{
     background-color: #E8AA42;
     padding: 60px 45px;
     display: flex;
     justify-content: center;
 }
 
-.hero-inner{
+.banner-inner{
     max-width:760px;
 }
 
-.hero h1{
+.banner h1{
     font-weight: bold;
     font-size: 3.5vw;
     margin: 0;
 }
 
-.hero p{
+.banner p{
     font-size: 2vw;
     line-height: 1.6;
 }
@@ -132,12 +132,12 @@ width: 25px;
     display: inline-block;
 }
 
-.features{
+.grid{
     background-color: #F8F1F1;
     padding: 60px;
 }
 
-.features-inner {
+.grid-inner {
     max-width: 1000px;
     margin: 0 auto;
     display: grid;
@@ -146,30 +146,30 @@ width: 25px;
     grid-row-gap: 45px;
 }
 
-.feature-item h3{
+.grid-item h3{
     font-size: 2.5vw;
     margin: 0;
 }
 
-.features img{
+.grid img{
     max-width: 100%;
     max-height: 100%;
     padding: 10px 0;
 }
 
-.feature-item p{
+.grid-item p{
     margin: 0;
     font-size: 1.8vw;
     line-height: 1.6;  
 }
-.feature-item a{
+.grid-item a{
     text-decoration: none;
     color: black;
     transition: all 0.3s ease;
     display: block;
 }
 
-.feature-item a:hover{
+.grid-item a:hover{
     color: #E57C23;
     transform: rotate(1.5deg);
 }
