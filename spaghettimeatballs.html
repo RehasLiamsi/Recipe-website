@@ -15,10 +15,10 @@
     <div class="header">
         <h1>Recipes</h1>
   
-        <form action="" class="search-bar">
+        <!-- <form action="" class="search-bar">
             <input type="text" placeholder="search for a recipe" name="search">
             <button type="submit"><img src="img/search.png"></button>
-          </form>
+          </form> -->
 
         <ul class="navigation">
           <li><a href="index.html">Home</a></li>
@@ -48,7 +48,12 @@
       <div class="recipe">
         <div class="recipe-inner">
             <img src="img/Spaghetti-and-Meatballs.jpg" alt="Spaghetti-and-Meatballs">
-            <ul>
+            <ul id="serving-list">
+                <li><form>
+                  <label for="serving">Enter the number of servings</label>
+                  <input type="number" id="serving" required>
+                  <button type="button" onclick="calculate()">Submit</button>
+                </form></li>
                 <li>Preparation time: --min</li>
                 <li>Cooking time: --min</li>
                 <li>Category: --</li>
@@ -62,5 +67,21 @@
     <div class="footer">
         <p>&copy; 2020 Saher Company</p>
       </div>
+
+      <script>
+        function calculate() {
+          let serving = document.getElementById("serving").value;
+
+          let preparationTime = serving * 10;
+          let cookingTime = serving * 20;
+
+          let servingList = document.getElementById("serving-list");
+          let preparation = servingList.getElementsByTagName("li")[1];
+          preparation.textContent = "Preparation time: " + preparationTime + " mins";
+          
+          let cooking = servingList.getElementsByTagName("li")[2];
+          cooking.textContent = "Cooking time: " + cookingTime + " mins";
+        }
+      </script>
   </body>
 </html>
