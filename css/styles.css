@@ -1,19 +1,20 @@
-body{
+body {
     margin: 0;
     font-family: 'Libre Baskerville', serif;
 }
 
-p{
+p {
     font-family: sans-serif;
+    font-size: 2.5vw;
 }
 
-.header{
+.header {
     padding: 0 50px;
     background-color: #025464;
     color: white;
     display: flex;
     justify-content: space-between;
-    align-items:center;
+    align-items: center;
     flex-wrap: wrap;
 }
 
@@ -64,8 +65,8 @@ width: 25px;
     transition: all 0.3s ease-out;
 }
 
-.navigation a:hover{
-    color:#B7F7DE;
+.navigation a:hover {
+    color: #B7F7DE;
     transform: rotate(5deg);
 }
 
@@ -78,39 +79,39 @@ width: 25px;
 
 .navigation li {
     margin-left: 20px;
+    font-size: 2vw;
+
 }
 
-.banner{
+.banner {
     background-color: #E8AA42;
     padding: 60px 45px;
     display: flex;
     justify-content: center;
 }
 
-.banner-inner{
-    max-width:760px;
+.banner-inner {
+    max-width: 760px;
 }
 
-.banner h1{
+.banner h1 {
     font-weight: bold;
     font-size: 3.5vw;
     margin: 0;
 }
 
-.banner p{
-    font-size: 1.5vw;
+.banner p {
+    font-size: 2vw;
     line-height: 1.6;
-    @media screen and (max-width:400px){
-        font-size: 2vw;
-    }
+
 }
 
-#bookmark-img{
+#bookmark-img {
     width: 1.7vw;
-    margin:0 10px;
+    margin: 0 10px;
 }
 
-.bookmark button{
+.bookmark button {
     background: transparent;
     text-decoration: none;
     border: none;
@@ -118,13 +119,13 @@ width: 25px;
     transition: all 0.3s ease-out;
 }
 
-.bookmark button:hover{
-    color:#025464;
+.bookmark button:hover {
+    color: #025464;
     transform: rotate(2deg);
     cursor: pointer;
 }
 
-.bookmark-inner{
+.bookmark-inner {
     display: flex;
 }
 
@@ -138,44 +139,45 @@ width: 25px;
     display: inline-block;
 }
 
-.grid{
+.grid {
     background-color: #F8F1F1;
     padding: 60px;
 }
 
 .grid-inner {
-    max-width: 62rem;
+    max-width: 60rem;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    grid-column-gap: 2.8rem;
-    grid-row-gap: 2.9rem;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-column-gap: 3rem;
+    grid-row-gap: 3rem;
 }
 
-.grid-item h3{
+.grid-item h3 {
     font-size: 1.8vw;
     margin: 0;
 }
 
-.grid img{
+.grid img {
     max-width: 100%;
     max-height: 100%;
     padding: 10px 0;
 }
 
-.grid-item p{
+.grid-item p {
     margin: 0;
-    font-size: 1.3vw;
-    line-height: 1.6;  
+    font-size: 1vw;
+    line-height: 1.6;
 }
-.grid-item a{
+
+.grid-item a {
     text-decoration: none;
     color: black;
     transition: all 0.3s ease;
     display: block;
 }
 
-.grid-item a:hover{
+.grid-item a:hover {
     color: #E57C23;
     transform: rotate(1.5deg);
 }
@@ -188,31 +190,30 @@ width: 25px;
     font-size: 0.9rem;
 }
 
-.recipe{
+.recipe {
     background-color: #F8F1F1;
     display: flex;
     justify-content: space-around;
-    align-items:center;
+    align-items: center;
     flex-wrap: wrap;
     padding: 30px 0;
 }
 
-.recipe-inner{
+.recipe-inner {
     max-width: 46.8rem;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-
+    flex-wrap: wrap;
 }
 
-.recipe-inner img{
+.recipe-inner img {
     max-width: 40%;
-    margin:20px 0 20px 20px;
+    margin: 20px 0 20px 20px;
 }
 
-.recipe-inner li{
+.recipe-inner li {
     margin-top: 10px;
-    font-size: 1.4vw;
 }
 
 .recipe-content {
@@ -220,9 +221,50 @@ width: 25px;
     margin: 0 40px;
 }
 
-.recipe-content p{
-    font-size: 1.3vw;
-    @media screen and (max-width:400px) {
-        font-size: 2vw;
+@media screen and (max-width: 768px) {
+    .header h1{
+        font-size: 25px;
     }
+
+    .navigation li{
+        font-size: 14px;
+    }
+
+    .banner p {
+        font-size: 12px;
+    }
+
+    .banner h1{
+        font-size: 23px;
+    }
+
+    .button {
+        font-size: 13px;
+    }
+
+    .grid-item h3{
+        font-size: 18px;
+    }
+
+    .grid-item p{
+        font-size: 12px;
+    }
+
+    .bookmark-inner button{
+        font-size: 12px;
+    }
+
+    #bookmark-img {
+        width: 12px;
+    }
+
+    .recipe-inner {
+        font-size: 10px;
+    }
+
+    .recipe-content p {
+        font-size: 12px;
+    }
+
 }
+
