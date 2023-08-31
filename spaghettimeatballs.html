@@ -1,90 +1,96 @@
 <!DOCTYPE html>
-<html>
-  <head>
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Recipes: Spaghetti and Meatballs</title>
-    <link rel="stylesheet" href="css/styles.css" />
-  </head>
-  <body>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap"
-      rel="stylesheet"
-    />
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipes: Spaghetti and Meatballs</title>
+    <link rel="stylesheet" href="css/styles.css"/>
+</head>
+<body>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link
+        href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet"
+/>
 
-    <div class="header">
-        <h1>Recipes</h1>
-  
-        <!-- <form action="" class="search-bar">
-            <input type="text" placeholder="search for a recipe" name="search">
-            <button type="submit"><img src="img/search.png"></button>
-          </form> -->
+<div class="header">
+    <h1>Recipes</h1>
 
-        <ul class="navigation">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Categories</a></li>
-        </ul>
-      </div>
+    <!-- <form action="" class="search-bar">
+        <input type="text" placeholder="search for a recipe" name="search">
+        <button type="submit"><img src="img/search.png"></button>
+      </form> -->
 
-      <div class="banner">
-        <div class="banner-inner">
-          <h1>Spaghetti and Meatballs</h1>
-          <p>
+    <ul class="navigation">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Categories</a></li>
+    </ul>
+</div>
+
+<div class="banner">
+    <div class="banner-inner">
+        <h1>Spaghetti and Meatballs</h1>
+        <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam
             expedita, officia cumque magni illo ipsa earum tempore impedit omnis
             voluptates repudiandae. At labore ad ex. Nisi, similique. Dolore, ad
             doloribus?
-          </p>
-          <div class="bookmark">
+        </p>
+        <div class="bookmark">
             <div class="bookmark-inner">
-          <img id="bookmark-img" src="img/bookmark2.png"></img>
-          <button type="button" onclick="document.getElementById('bookmark-img').src='img/bookmark-fill.png'">Bookmark this recipe</button>
+                <img id="bookmark-img" src="img/bookmark2.png" alt="bookmark icon">
+                <button type="button" onclick="document.getElementById('bookmark-img').src='img/bookmark-fill.png'">
+                    Bookmark this recipe
+                </button>
+            </div>
         </div>
-      </div>
-        </div>
-      </div>
-
-      <div class="recipe">
-        <div class="recipe-inner">
-            <img src="img/Spaghetti-and-Meatballs.jpg" alt="Spaghetti-and-Meatballs">
-            <ul id="serving-list">
-                <li><form>
-                  <label for="serving">Enter the number of servings</label>
-                  <input type="number" id="serving" required>
-                  <button type="button" onclick="calculate()">Submit</button>
-                </form></li>
-                <li>Preparation time: --min</li>
-                <li>Cooking time: --min</li>
-                <li>Category: --</li>
-            </ul>
-        </div>
-        <div class="recipe-content">
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illum maiores nostrum odio nisi cum laudantium, veniam esse voluptatem, obcaecati nemo laborum nihil. Impedit, voluptates quaerat nemo deserunt rerum placeat debitis.</p>
-        </div>  
     </div>
+</div>
 
-    <div class="footer">
-        <p id="contact-us"><a href="mailto:email@example.com">Mail us</a></p>
-        <p>&copy; 2023 The Recipe Hub</p>
+<div class="recipe">
+    <div class="recipe-inner">
+        <img src="img/Spaghetti-and-Meatballs.jpg" alt="Spaghetti-and-Meatballs">
+        <ul id="serving-list">
+            <li>
+                <form>
+                    <label for="serving">Enter the number of servings</label>
+                    <input type="number" id="serving" required>
+                    <button type="button" onclick="calculate()">Submit</button>
+                </form>
+            </li>
+            <li>Preparation time: --min</li>
+            <li>Cooking time: --min</li>
+            <li>Category: --</li>
+        </ul>
+    </div>
+    <div class="recipe-content">
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illum maiores nostrum odio nisi cum laudantium,
+            veniam esse voluptatem, obcaecati nemo laborum nihil. Impedit, voluptates quaerat nemo deserunt rerum
+            placeat debitis.</p>
+    </div>
+</div>
 
-      </div>
+<div class="footer">
+    <p id="contact-us"><a href="mailto:email@example.com">Mail us</a></p>
+    <p>&copy; 2023 The Recipe Hub</p>
 
-      <script>
-        function calculate() {
-          let serving = document.getElementById("serving").value;
+</div>
 
-          let preparationTime = serving * 10;
-          let cookingTime = serving * 20;
+<script>
+    function calculate() {
+        let serving = document.getElementById("serving").value;
 
-          let servingList = document.getElementById("serving-list");
-          let preparation = servingList.getElementsByTagName("li")[1];
-          preparation.textContent = "Preparation time: " + preparationTime + " mins";
-          
-          let cooking = servingList.getElementsByTagName("li")[2];
-          cooking.textContent = "Cooking time: " + cookingTime + " mins";
-        }
-      </script>
-  </body>
+        let preparationTime = serving * 10;
+        let cookingTime = serving * 20;
+
+        let servingList = document.getElementById("serving-list");
+        let preparation = servingList.getElementsByTagName("li")[1];
+        preparation.textContent = "Preparation time: " + preparationTime + " mins";
+
+        let cooking = servingList.getElementsByTagName("li")[2];
+        cooking.textContent = "Cooking time: " + cookingTime + " mins";
+    }
+</script>
+</body>
 </html>
