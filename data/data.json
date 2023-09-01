@@ -1,0 +1,20 @@
+{
+    "recipes":[
+        {
+            "recipeTitle": "Spaghetti and Meatballs",
+            "recipeCategory": "Pasta, Meat"
+        },
+        {
+            "recipeTitle": "Fish and Chips",
+            "recipeCategory": "Seafood"
+        },
+        {   
+            "recipeTitle": "Pesto Pasta",
+            "recipeCategory": "Pasta, Vegetarian"
+        },
+        {
+            "recipeTitle": "Chicken Tandoori",
+            "recipeCategory": "Chicken, Spicy"
+        }
+    ]
+}

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipes</title>
+    <link rel="stylesheet" href="css/styles.css">
+  </head>
+  <body>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap"
+      rel="stylesheet">
+    <div class="header">
+      <h1>Recipes</h1>
+
+      <!-- <form action="" class="search-bar">↩
+        <input type="text" placeholder="search for a recipe" name="search">↩
+        <button type="submit"><img src="img/search.png"></button>↩
+      </form> -->
+
+      <ul class="navigation">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Categories</a></li>
+      </ul>
+    </div>
+
+    <div class="banner">
+      <div class="banner-inner">
+        <h1>All our recipes</h1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam
+          expedita, officia cumque magni illo ipsa earum tempore impedit omnis
+          voluptates repudiandae. At labore ad ex. Nisi, similique. Dolore, ad
+          doloribus?
+        </p>
+      </div>
+    </div>
+
+    <ol id="allRecipes"></ol>
+
+    <div class="footer">
+        <p id="contact-us"><a href="mailto:email@example.com">Mail us</a></p>
+        <p>&copy; 2023 The Recipe Hub</p>
+      </div>
+
+    <script>
+      function createNode(element){
+        return document.createElement(element);
+      }
+
+      function append(parent, el){
+        return parent.appendChild(el);
+      }
+
+      const ol = document.querySelector("#allRecipes");
+      const url = "data/data.json";
+      fetch(url)
+      .then ((resp) => resp.json())
+      .then(function(data){
+        let recipes = data.recipes;
+
+        return recipes.map(function(recipe){
+            let li = createNode("li");
+            li.textContent = recipe.recipeTitle + ": " + recipe.recipeCategory;
+            append(ol, li);
+        })
+      })
+
+      .catch(function(error){
+        console.log(error);
+      })
+    </script>
+  </body>
+  </html>

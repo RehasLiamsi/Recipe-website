@@ -1,6 +1,8 @@
 body {
     margin: 0;
     font-family: 'Libre Baskerville', serif;
+    background-color: #F8F1F1;
+
 }
 
 p {
@@ -140,7 +142,6 @@ width: 25px;
 }
 
 .grid {
-    background-color: #F8F1F1;
     padding: 60px;
 }
 
@@ -183,7 +184,6 @@ width: 25px;
 }
 
 .recipe {
-    background-color: #F8F1F1;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -213,7 +213,19 @@ width: 25px;
     margin: 0 40px;
 }
 
+#allRecipes{
+    padding: 20px 50px;
+    margin:20px;
+    display: flex;
+    flex-direction: column;
+}
+
+#allRecipes li{
+    padding:10px;
+}
+
 .footer {
+    background-color: white;
     text-align: center;
     padding: 10px 0;
     color: #999;
