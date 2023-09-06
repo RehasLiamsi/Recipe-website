@@ -1,8 +1,10 @@
 function createNode(element){
+    'use strict';
     return document.createElement(element);
   }
 
   function append(parent, el){
+    'use strict';
     return parent.appendChild(el);
   }
 

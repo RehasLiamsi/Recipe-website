@@ -1,4 +1,5 @@
 function calculate() {
+    'use strict';
     let serving = document.getElementById("serving").value;
 
     let preparationTime = serving * 10;
