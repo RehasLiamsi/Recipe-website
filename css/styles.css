@@ -92,6 +92,7 @@ p {
 
 .bookmark-inner {
     display: flex;
+    align-items: center;
 }
 
 .button {
@@ -102,6 +103,24 @@ p {
     border-radius: 8px;
     font-size: 1.18rem;
     display: inline-block;
+}
+
+.bookmark a{
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    color:black;
+    font-size: 2vw;
+    font-weight: bold;
+    text-decoration: none;    
+    transition: all 0.3s ease-out;
+
+}
+
+.bookmark a:hover{
+    color:#025464;
+    transform: rotate(2deg);
+    cursor: pointer;
 }
 
 .grid {
